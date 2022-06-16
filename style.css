@@ -4,8 +4,8 @@ body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
 	display: grid;
-	grid-template-columns: 350px 1fr 350px;
-	grid-template-rows: 150px 1fr 1fr;
+	grid-template-columns: min(300px, 25%) 1fr min(300px, 25%);
+	grid-template-rows: 150px 1fr;
 	--padding: 2vw;
 }
 
@@ -40,10 +40,17 @@ ul {
 	padding: 0px var(--padding);
 }
 
+#search-icon {
+	width: 20px;
+}
+
+#search {
+}
+
 nav {
 	display: grid;
-	grid-template-column: 3f 2f;
-	grid-template-row: 2f 3f;
+	grid-template-columns: 30px 2fr 1fr;
+	align-items: center;
 }
 
 .search-bar {
@@ -78,23 +85,25 @@ main {
 }
 
 .card-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 4%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 32%));
+	grid-template-rows: repeat(2, 250px);
+	gap: 2%;
 }
 
 main > h3 {
 	display: block;
 	width: 100%;
-	height: 50px;
+	height: 25px;
+	color: white;
+	font-size: 1.5rem;
 }
 
 .card {
-	flex: 1 1 auto;
-	max-width: max(250px, 48%);
 	background-color: white;
 	border-radius: 10px;
-	margin-bottom: 4%;
+	padding: var(--padding);
+	margin-bottom: 2%;
 }
 
 aside {
