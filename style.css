@@ -197,3 +197,13 @@ h4 {
 	font-size: 0.8rem;
 	color: gray;
 }
+
+.trending-item {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+}
+
+.trending-item .profile-pics {
+	width: 90%;
+	border: 2px solid #e2e8f0;
+}
