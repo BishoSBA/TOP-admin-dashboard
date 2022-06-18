@@ -6,6 +6,7 @@ body {
 	display: grid;
 	grid-template-columns: min(300px, 25%) 1fr min(300px, 25%);
 	grid-template-rows: 180px 1fr;
+	font-size: large;
 	--padding: 2vw;
 }
 
@@ -16,7 +17,7 @@ body {
 	font-size: 1.3rem;
 	font-weight: 600;
 	box-shadow: #475569 1px 1px 5px;
-	z-index: 1;
+	z-index: 2;
 }
 .sidebar-title a {
 	display: flex;
@@ -70,6 +71,7 @@ ul {
 	grid-column: 2/ 4;
 	padding: 0px calc(20px +var(--padding));
 	box-shadow: #475569 1px 1px 5px;
+	z-index: 2;
 }
 
 #search-icon {
@@ -82,6 +84,7 @@ ul {
 	height: 35px;
 	background-color: #e2e8f0;
 	border: 0px;
+	padding: 0px 10px;
 }
 
 nav {
@@ -147,7 +150,7 @@ main {
 	align-items: start;
 	padding: var(--padding);
 	background-color: #e2e8f0;
-	z-index: -1;
+	z-index: 1;
 }
 
 .card-container {
@@ -174,7 +177,7 @@ aside > h3 {
 
 aside {
 	background-color: #e2e8f0;
-	z-index: -1;
+	z-index: 1;
 }
 
 .announcement-list,
@@ -184,7 +187,9 @@ aside {
 	padding: var(--padding);
 }
 
-h4 {
+.announcement-list h4,
+h5,
+p {
 	margin: 0;
 }
 
@@ -193,17 +198,20 @@ h4 {
 	border-radius: 100%;
 }
 
-.announcement-list p {
+.announcement-list p,
+.trending-list p {
 	font-size: 0.8rem;
 	color: gray;
 }
 
 .trending-item {
 	display: grid;
-	grid-template-columns: 100px 1fr;
+	grid-template-columns: 60px 1fr;
+	align-content: center;
+	align-items: center;
+	padding-bottom: 10px;
 }
 
 .trending-item .profile-pics {
-	width: 90%;
 	border: 2px solid #e2e8f0;
 }
