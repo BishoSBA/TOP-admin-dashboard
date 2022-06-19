@@ -4,15 +4,17 @@ body {
 	font-family: "Roboto", sans-serif;
 	margin: 0;
 	display: grid;
-	grid-template-columns: min(300px, 25%) 1fr min(300px, 25%);
+	grid-template-columns: minmax(300px, 15%) 1fr minmax(300px, 18%);
 	grid-template-rows: 180px 1fr;
 	font-size: large;
 	--padding: 2vw;
+	--inPadding: 1.5vw;
 }
 
 .sidebar-container {
 	display: grid;
-	grid-template-rows: 125px 4fr 5fr 50px;
+	position: relative;
+	grid-template-rows: 125px 350px 1fr 50px;
 	grid-row: 1/-1;
 	background-color: #14b8a6;
 	color: white;
@@ -23,21 +25,33 @@ body {
 }
 .sidebar-title a {
 	display: flex;
+	position: fixed;
 	align-items: center;
-	padding: 0px 8%;
+	padding: 0px 2%;
 	gap: 10px;
 }
 
-.sidebar-list {
+.sidebar-list.pages {
 	display: grid;
+	position: fixed;
 	grid-template-rows: repeat(6, 50px);
-	padding: 0px 10%;
+	margin: 100px 3%;
+	align-content: flex-start;
+}
+
+.sidebar-list.settings {
+	display: grid;
+	position: fixed;
+	grid-template-rows: repeat(6, 50px);
+	margin: 425px 3%;
 	align-content: flex-start;
 }
 
 footer {
-	align-self: center;
+	position: fixed;
+	align-self: flex-end;
 	justify-self: center;
+	padding-bottom: 30px;
 }
 
 .copyright {
@@ -172,9 +186,10 @@ main {
 
 .card-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 32%));
-	grid-template-rows: repeat(2, 250px);
-	gap: 2%;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+	grid-template-rows: repeat(2, 300px);
+	grid-auto-rows: 300px;
+	gap: 1vw;
 }
 
 main > h3,
@@ -188,26 +203,32 @@ aside > h3 {
 .card {
 	background-color: white;
 	border-radius: 10px;
-	padding: var(--padding);
-	margin-bottom: 2%;
+	padding: var(--inPadding);
 }
 
 aside {
+	display: grid;
+	grid-template-columns: 3/4;
+	align-items: center;
 	background-color: #e2e8f0;
+	padding: var(--inPadding);
 	z-index: 1;
 }
 
 .announcement-list,
 .trending-list {
+	display: grid;
+	gap: 10px;
 	background-color: white;
 	border-radius: 10px;
-	padding: var(--padding);
+	padding: var(--inPadding);
 }
 
+.aside > h3,
 .announcement-list h4,
 h5,
 p {
-	margin: 0;
+	margin: 0px;
 }
 
 .profile-pics {
@@ -224,9 +245,6 @@ p {
 .trending-item {
 	display: grid;
 	grid-template-columns: 60px 1fr;
-	align-content: center;
-	align-items: center;
-	padding-bottom: 10px;
 }
 
 .trending-item .profile-pics {
