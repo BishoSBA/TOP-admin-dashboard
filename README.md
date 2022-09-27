@@ -1,6 +1,5 @@
 # Project: Admin Dashboard
 TOP project: [Admin Dashboard](https://bishosba.github.io/project-admin-dashboard/)
-(TOP stands for [The Odin Project](https:www.theodinproject) which is a self-paced fullstack course. I am going through it to supplement my CS university education with practical skills.)
 
 The frontend code for an admin dashboard using css grid for layout with minimalistic CSS touches
 
@@ -25,3 +24,10 @@ The frontend code for an admin dashboard using css grid for layout with minimali
 
 👤 **BishoSBA**
 * GitHub: [BishoSBA](https://github.com/BishoSBA)
+
+### Other Examples
+**Right Notes:** https://github.com/bishosba/right-notes/
+
+**Portfolio:** https://github.com/bishosba/portfolio/
+
+**Library:** https://github.com/bishosba/project-library/
