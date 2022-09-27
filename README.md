@@ -1,7 +1,7 @@
 # Project: Admin Dashboard
-TOP project: [Admin Dashboard](https://bishosba.github.io/project-admin-dashboard/)
+TOP Front-end project: [Admin Dashboard](https://bishosba.github.io/project-admin-dashboard/)
 
-The frontend code for an admin dashboard using css grid for layout with minimalistic CSS touches
+The frontend for an admin dashboard using css grid for layout with minimalistic CSS touches
 
 ## Technologies used
 * HTML
